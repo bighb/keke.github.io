@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>可可的大树</title>
+  <icon>https://bighb.github.io/icon.png</icon>
+  
+  <link href="https://bighb.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://bighb.github.io/"/>
+  <updated>2024-05-06T09:37:05.283Z</updated>
+  <id>https://bighb.github.io/</id>
+  
+  <author>
+    <name>bighb</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重拾博客</title>
+    <link href="https://bighb.github.io/2024/05/06/2024-05-06/"/>
+    <id>https://bighb.github.io/2024/05/06/2024-05-06/</id>
+    <published>2024-05-06T08:44:41.000Z</published>
+    <updated>2024-05-06T09:37:05.283Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天，我怀着激动的心情，开启了我的博客之旅。&lt;/p&gt;
+&lt;p&gt;作为一名程序员，我曾经断断续续地写过一些博客，但都因为各种原因未能坚持下来。回首过去，那些浅尝辄止的写作经历，像是一次次的试探，让我更加坚定了记录和分享的想法。&lt;/p&gt;
+&lt;p&gt;最近个把月我经常看别人的博客，看得最多</summary>
+        
+      
+    
+    
+    
+    <category term="日常" scheme="https://bighb.github.io/categories/%E6%97%A5%E5%B8%B8/"/>
+    
+    
+  </entry>
+  
+</feed>

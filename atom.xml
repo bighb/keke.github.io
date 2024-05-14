@@ -6,7 +6,7 @@
   <link href="https://bighb.github.io/atom.xml" rel="self"/>
   
   <link href="https://bighb.github.io/"/>
-  <updated>2024-05-06T09:37:05.283Z</updated>
+  <updated>2024-05-14T14:50:45.400Z</updated>
   <id>https://bighb.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客部署</title>
+    <link href="https://bighb.github.io/2024/05/14/2024-05-14/"/>
+    <id>https://bighb.github.io/2024/05/14/2024-05-14/</id>
+    <published>2024-05-14T14:30:26.000Z</published>
+    <updated>2024-05-14T14:50:45.400Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;记录一下自己平时发布博客的简单步骤&quot;&gt;&lt;a href=&quot;#记录一下自己平时发布博客的简单步骤&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://bighb.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>重拾博客</title>

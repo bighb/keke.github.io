@@ -6,7 +6,7 @@
   <link href="https://bighb.github.io/atom.xml" rel="self"/>
   
   <link href="https://bighb.github.io/"/>
-  <updated>2024-05-14T14:50:45.400Z</updated>
+  <updated>2024-05-15T02:36:14.376Z</updated>
   <id>https://bighb.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IntelliJ IDEA 激活</title>
+    <link href="https://bighb.github.io/2024/05/15/2024-05-15/"/>
+    <id>https://bighb.github.io/2024/05/15/2024-05-15/</id>
+    <published>2024-05-15T01:47:02.000Z</published>
+    <updated>2024-05-15T02:36:14.376Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;平时作为前端开发，主要是使用VSCode开发，Java作为兴趣爱好来学习，所以IntelliJ IDEA</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://bighb.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>博客部署</title>

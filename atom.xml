@@ -6,7 +6,7 @@
   <link href="https://bighb.github.io/atom.xml" rel="self"/>
   
   <link href="https://bighb.github.io/"/>
-  <updated>2024-05-23T09:24:12.932Z</updated>
+  <updated>2024-05-23T09:42:33.341Z</updated>
   <id>https://bighb.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://bighb.github.io/2024/05/15/2024-05-15/"/>
     <id>https://bighb.github.io/2024/05/15/2024-05-15/</id>
     <published>2024-05-15T01:47:02.000Z</published>
-    <updated>2024-05-23T09:24:12.932Z</updated>
+    <updated>2024-05-23T09:42:33.341Z</updated>
     
     
       
@@ -39,6 +39,10 @@
     <category term="技术" scheme="https://bighb.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="java" scheme="https://bighb.github.io/tags/java/"/>
+    
+    <category term="IDEA" scheme="https://bighb.github.io/tags/IDEA/"/>
+    
   </entry>
   
   <entry>
@@ -46,7 +50,7 @@
     <link href="https://bighb.github.io/2024/05/14/2024-05-14/"/>
     <id>https://bighb.github.io/2024/05/14/2024-05-14/</id>
     <published>2024-05-14T14:30:26.000Z</published>
-    <updated>2024-05-14T14:50:45.400Z</updated>
+    <updated>2024-05-23T09:36:28.884Z</updated>
     
     
       
@@ -61,6 +65,8 @@
     
     <category term="技术" scheme="https://bighb.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
+    
+    <category term="闲杂" scheme="https://bighb.github.io/tags/%E9%97%B2%E6%9D%82/"/>
     
   </entry>
   

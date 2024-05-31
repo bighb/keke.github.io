@@ -6,7 +6,7 @@
   <link href="https://bighb.github.io/atom.xml" rel="self"/>
   
   <link href="https://bighb.github.io/"/>
-  <updated>2024-05-23T09:42:33.341Z</updated>
+  <updated>2024-05-31T09:21:17.602Z</updated>
   <id>https://bighb.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>终端请求调试谷歌 AI 接口</title>
+    <link href="https://bighb.github.io/2024/05/31/2024-05-31/"/>
+    <id>https://bighb.github.io/2024/05/31/2024-05-31/</id>
+    <published>2024-05-31T08:17:26.000Z</published>
+    <updated>2024-05-31T09:21:17.602Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;[^]: &lt;/p&gt;
+&lt;p&gt;写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="https://bighb.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="curl - proxychains4 - clashX - curl - proxy" scheme="https://bighb.github.io/tags/curl-proxychains4-clashX-curl-proxy/"/>
+    
+  </entry>
   
   <entry>
     <title>IntelliJ IDEA 激活</title>

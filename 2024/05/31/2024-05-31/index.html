@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+    
+
+<meta charset="utf-8" >
+
+<title>终端请求调试谷歌 AI 接口</title>
+<meta name="keywords" content="终端请求调试谷歌 AI 接口, 可可的大树">
+<meta name="description" content="[^]: 
+写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
+1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;co">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="终端请求调试谷歌 AI 接口">
+<meta property="og:description" content="[^]: 
+写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
+1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;co">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
+
+  <link rel="stylesheet" href="/style/simple-lightbox.min.css"><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="可可的大树" type="application/atom+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://bighb.github.io">
+        <img class="avatar" src="/images/avatar.png" alt="logo" width="32px" height="32px">
+      </a>
+      <a href="https://bighb.github.io">
+        <h1 class="site-title">可可的大树</h1>
+      </a>
+    </div>
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        首页
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        标签
+      </a>
+    
+  
+    
+      <a href="/categories" class="menu purple-link">
+        分类
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        归档
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        关于
+      </a>
+    
+  
+</nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">终端请求调试谷歌 AI 接口</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-05-31</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/curl-proxychains4-clashX-curl-proxy/">
+              curl - proxychains4 - clashX - curl - proxy
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <p>[^]: </p>
+<p>写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl \</span><br><span class="line">  -H <span class="string">&#x27;Content-Type: application/json&#x27;</span> \</span><br><span class="line">  -d <span class="string">&#x27;&#123;&quot;contents&quot;:[&#123;&quot;parts&quot;:[&#123;&quot;text&quot;:&quot;Explain how AI works&quot;&#125;]&#125;]&#125;&#x27;</span> \</span><br><span class="line">  -X POST <span class="string">&#x27;https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=YOUR_API_KEY&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>在 Term2 终端中运行之后返回如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;error&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;code&quot;</span>: 400,</span><br><span class="line">    <span class="string">&quot;message&quot;</span>: <span class="string">&quot;User location is not supported for the API use.&quot;</span>,</span><br><span class="line">    <span class="string">&quot;status&quot;</span>: <span class="string">&quot;FAILED_PRECONDITION&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>很明显是我的 IP 所属地区被谷歌 AI 限制，因此下一步 意识到需要开梯子</p>
+<h4 id="开启-clashX"><a href="#开启-clashX" class="headerlink" title="开启 clashX"></a>开启 clashX</h4><p>配置方式如下</p>
+<p><a class="simple-lightbox" href="/../images/clashX.png"><img   src="/images/loading.svg" data-src="/../images/clashX.png"  alt="clashX" lazyload></a></p>
+<p>因为平时我开梯子就是这种方式。</p>
+<p>梯子配置好之后（浏览器可以访问外网），再次在终端运行 curl 命令，返回还是一样，说明终端并没有走代理。</p>
+<p><strong>会不会是出站模式（规则）不是全局连接导致的，改成全局连接，仍然不行</strong>。</p>
+<p>查询得知（chatgpt）：</p>
+<p>如果在终端请求中没有走 ClashX 代理，但是浏览器请求却走了代理，可能是由于以下几个原因导致的：</p>
+<ol>
+<li><strong>代理设置问题</strong>：首先，请确保在终端中的代理设置与浏览器中的代理设置一致。如果在终端中没有正确配置代理，那么终端中的请求将不会走代理。</li>
+<li><strong>终端环境变量设置</strong>：在终端中进行网络请求时，有些程序可能会忽略系统代理设置，而是依赖环境变量来确定代理配置。你可以检查终端中是否设置了正确的代理环境变量，例如 <code>HTTP_PROXY</code>、<code>HTTPS_PROXY</code>、<code>ALL_PROXY</code> 等。</li>
+</ol>
+<p>总结就是终端没有走系统 clashX 代理，需要手动配置环境变量</p>
+<h4 id="手动配置代理环境变量"><a href="#手动配置代理环境变量" class="headerlink" title="手动配置代理环境变量"></a>手动配置代理环境变量</h4><p>选择 clashX 中的<strong>复制终端代理命令</strong>，如下图</p>
+<p><a class="simple-lightbox" href="/../images/Snipaste_2024-05-31_16-54-00.png"><img   src="/images/loading.svg" data-src="/../images/Snipaste_2024-05-31_16-54-00.png"  alt="Snipaste_2024-05-31_16-54-00" lazyload></a></p>
+<p>在终端中运行复制的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
+<p>查看是否配置成功：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">env</span> | grep -i <span class="string">&#x27;proxy&#x27;</span></span><br><span class="line"><span class="comment">#输出如下表示成功</span></span><br><span class="line">https_proxy=http://127.0.0.1:7890</span><br><span class="line">http_proxy=http://127.0.0.1:7890</span><br><span class="line">all_proxy=socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
+<p>好了，检测一下是否 IP 变了，终端运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  curl cip.cc</span><br></pre></td></tr></table></figure>
+
+<p><a class="simple-lightbox" href="/../images/Snipaste_2024-05-31_16-59-02.png"><img   src="/images/loading.svg" data-src="/../images/Snipaste_2024-05-31_16-59-02.png"  alt="Snipaste_2024-05-31_16-59-02" lazyload></a></p>
+<p>成功代理！</p>
+<h4 id="再次调试谷歌-AI-接口"><a href="#再次调试谷歌-AI-接口" class="headerlink" title="再次调试谷歌 AI 接口"></a>再次调试谷歌 AI 接口</h4><p>运行 curl 请求之后，还是不行，什么鬼！哦～原来我是因为开启了两个终端 tab,我设置代理变量和运行 curl 是两个不同环境，</p>
+<p>再配置的代理变量窗口运行 curl 之后，谷歌 AI 接口成功返回！！</p>
+<p><a class="simple-lightbox" href="/../images/Snipaste_2024-05-31_17-04-30.png"><img   src="/images/loading.svg" data-src="/../images/Snipaste_2024-05-31_17-04-30.png"  alt="Snipaste_2024-05-31_17-04-30" lazyload></a></p>
+<h4 id="解决过程知识点汇总"><a href="#解决过程知识点汇总" class="headerlink" title="解决过程知识点汇总"></a>解决过程知识点汇总</h4><h5 id="export-和-unset-是-Bash（Bourne-Again-Shell）等-Unix-shell-中的命令，用于设置和取消环境变量。"><a href="#export-和-unset-是-Bash（Bourne-Again-Shell）等-Unix-shell-中的命令，用于设置和取消环境变量。" class="headerlink" title="export 和 unset 是 Bash（Bourne Again Shell）等 Unix shell 中的命令，用于设置和取消环境变量。"></a><code>export</code> 和 <code>unset</code> 是 Bash（Bourne Again Shell）等 Unix shell 中的命令，用于设置和取消环境变量。</h5><p><code>export</code> 命令用于设置环境变量，将一个变量标记为环境变量，使其在当前 shell 进程及其子进程中可用。语法为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> VARIABLE=value</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>VARIABLE</code> 是环境变量的名称。</li>
+<li><code>value</code> 是要设置的值。</li>
+</ul>
+<p><code>unset</code> 命令用于删除环境变量，从而将其从当前 shell 中移除。语法为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">unset</span> VARIABLE</span><br></pre></td></tr></table></figure>
+
+<p>配置 <code>https_proxy</code> 环境变量<strong>只会</strong>影响通过命令行工具发出的 HTTPS 请求，例如 <code>curl</code>、<code>wget</code> 等。对于浏览器来说，它们通常不会直接受到 <code>https_proxy</code> 的影响。</p>
+<h5 id="curl-cip-cc-命令"><a href="#curl-cip-cc-命令" class="headerlink" title="curl cip.cc 命令"></a>curl cip.cc 命令</h5><p>表示使用 http 请求访问 cip.cc 网站。返回的结果将显示通过代理链访问 <code>cip.cc</code> 时的出口 IP 地址及其相关信息。</p>
+<p>示例输出：</p>
+<p>假设你的代理链配置有效，运行这个命令后的输出可能是：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">IP :</span> <span class="number">203.0</span><span class="number">.113</span><span class="number">.1</span></span><br><span class="line"><span class="string">地址</span> <span class="string">:</span> <span class="string">中国</span> <span class="string">北京</span></span><br><span class="line"><span class="string">运营商</span> <span class="string">:</span> <span class="string">电信</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><p><a target="_blank" rel="noopener" href="https://aistudio.google.com/app/apikey?hl=zh-cn">https://aistudio.google.com/app/apikey?hl=zh-cn</a> 谷歌AI 调试</p>
+
+        </div>
+          
+        <div class="top-div">
+          
+        </div>
+          
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/2024/05/15/2024-05-15/">
+          <h3 class="post-title">
+            下一篇：IntelliJ IDEA 激活
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a aria-label="跳转至github" href="https://github.com/bighb" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+    </div>
+    
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"photo_zoom":"simple-lightbox"}}; window.is_post = true; </script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  <script src="/js/simple-lightbox.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {new SimpleLightbox('.post-detail .simple-lightbox', {fileExt: false,captionsData:'alt'});});</script></body>
+</html>
+

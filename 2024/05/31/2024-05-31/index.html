@@ -4,23 +4,21 @@
     
 
     
-<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+<script>!function(){document.documentElement.classList.toggle("dark",!0)}()</script>
     
 
 <meta charset="utf-8" >
 
 <title>终端请求调试谷歌 AI 接口</title>
 <meta name="keywords" content="终端请求调试谷歌 AI 接口, 可可的大树">
-<meta name="description" content="[^]: 
-写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
-1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;co">
+<meta name="description" content="写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
+1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;contents">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="终端请求调试谷歌 AI 接口">
-<meta property="og:description" content="[^]: 
-写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
-1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;co">
+<meta property="og:description" content="写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：
+1234curl \  -H &#x27;Content-Type: application/json&#x27; \  -d &#x27;&#123;&quot;contents">
 
 <link rel="shortcut icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/style/main.css">
@@ -94,8 +92,29 @@
           <span>
           <i class="icon icon-pricetags-outline"></i>
             
-              <a href="/tags/curl-proxychains4-clashX-curl-proxy/">
-              curl - proxychains4 - clashX - curl - proxy
+              <a href="/tags/curl/">
+              curl
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/proxychains4/">
+              proxychains4
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/clashX/">
+              clashX
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/proxy/">
+              proxy
                 
               </a>
             
@@ -104,8 +123,7 @@
       </div>
       <div class="post-content-wrapper">
         <div class="post-content">
-          <p>[^]: </p>
-<p>写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：</p>
+          <p>写这篇博客的起因是因为我需要调试谷歌的 AI 接口,如下：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">curl \</span><br><span class="line">  -H <span class="string">&#x27;Content-Type: application/json&#x27;</span> \</span><br><span class="line">  -d <span class="string">&#x27;&#123;&quot;contents&quot;:[&#123;&quot;parts&quot;:[&#123;&quot;text&quot;:&quot;Explain how AI works&quot;&#125;]&#125;]&#125;&#x27;</span> \</span><br><span class="line">  -X POST <span class="string">&#x27;https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=YOUR_API_KEY&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>在 Term2 终端中运行之后返回如下：</p>

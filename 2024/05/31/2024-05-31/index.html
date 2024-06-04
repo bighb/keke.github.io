@@ -156,9 +156,10 @@
 <p><a class="simple-lightbox" href="/../images/Snipaste_2024-05-31_16-59-02.png"><img   src="/images/loading.svg" data-src="/../images/Snipaste_2024-05-31_16-59-02.png"  alt="Snipaste_2024-05-31_16-59-02" lazyload></a></p>
 <p>成功代理！</p>
 <h4 id="再次调试谷歌-AI-接口"><a href="#再次调试谷歌-AI-接口" class="headerlink" title="再次调试谷歌 AI 接口"></a>再次调试谷歌 AI 接口</h4><p>运行 curl 请求之后，还是不行，什么鬼！哦～原来我是因为开启了两个终端 tab,我设置代理变量和运行 curl 是两个不同环境，</p>
-<p>再配置的代理变量窗口运行 curl 之后，谷歌 AI 接口成功返回！！</p>
+<p>在配置的代理变量窗口运行 curl 之后，谷歌 AI 接口成功返回！！</p>
 <p><a class="simple-lightbox" href="/../images/Snipaste_2024-05-31_17-04-30.png"><img   src="/images/loading.svg" data-src="/../images/Snipaste_2024-05-31_17-04-30.png"  alt="Snipaste_2024-05-31_17-04-30" lazyload></a></p>
-<h4 id="解决过程知识点汇总"><a href="#解决过程知识点汇总" class="headerlink" title="解决过程知识点汇总"></a>解决过程知识点汇总</h4><h5 id="export-和-unset-是-Bash（Bourne-Again-Shell）等-Unix-shell-中的命令，用于设置和取消环境变量。"><a href="#export-和-unset-是-Bash（Bourne-Again-Shell）等-Unix-shell-中的命令，用于设置和取消环境变量。" class="headerlink" title="export 和 unset 是 Bash（Bourne Again Shell）等 Unix shell 中的命令，用于设置和取消环境变量。"></a><code>export</code> 和 <code>unset</code> 是 Bash（Bourne Again Shell）等 Unix shell 中的命令，用于设置和取消环境变量。</h5><p><code>export</code> 命令用于设置环境变量，将一个变量标记为环境变量，使其在当前 shell 进程及其子进程中可用。语法为：</p>
+<h4 id="解决过程知识点汇总"><a href="#解决过程知识点汇总" class="headerlink" title="解决过程知识点汇总"></a>解决过程知识点汇总</h4><p><strong><code>export</code> 和 <code>unset</code> 是 Bash（Bourne Again Shell）等 Unix shell 中的命令，用于设置和取消环境变量。</strong></p>
+<p><code>export</code> 命令用于设置环境变量，将一个变量标记为环境变量，使其在当前 shell 进程及其子进程中可用。语法为：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">export</span> VARIABLE=value</span><br></pre></td></tr></table></figure>
 
 <ul>
@@ -169,7 +170,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">unset</span> VARIABLE</span><br></pre></td></tr></table></figure>
 
 <p>配置 <code>https_proxy</code> 环境变量<strong>只会</strong>影响通过命令行工具发出的 HTTPS 请求，例如 <code>curl</code>、<code>wget</code> 等。对于浏览器来说，它们通常不会直接受到 <code>https_proxy</code> 的影响。</p>
-<h5 id="curl-cip-cc-命令"><a href="#curl-cip-cc-命令" class="headerlink" title="curl cip.cc 命令"></a>curl cip.cc 命令</h5><p>表示使用 http 请求访问 cip.cc 网站。返回的结果将显示通过代理链访问 <code>cip.cc</code> 时的出口 IP 地址及其相关信息。</p>
+<p><strong>curl cip.cc 命令</strong></p>
+<p>表示使用 http 请求访问 cip.cc 网站。返回的结果将显示通过代理链访问 <code>cip.cc</code> 时的出口 IP 地址及其相关信息。</p>
 <p>示例输出：</p>
 <p>假设你的代理链配置有效，运行这个命令后的输出可能是：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">IP :</span> <span class="number">203.0</span><span class="number">.113</span><span class="number">.1</span></span><br><span class="line"><span class="string">地址</span> <span class="string">:</span> <span class="string">中国</span> <span class="string">北京</span></span><br><span class="line"><span class="string">运营商</span> <span class="string">:</span> <span class="string">电信</span></span><br></pre></td></tr></table></figure>

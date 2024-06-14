@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    
+<script>!function(){var e=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,t=localStorage.getItem("use-color-scheme")||"auto";("dark"===t||e&&"light"!==t)&&document.documentElement.classList.toggle("dark",!0)}()</script>
+    
+
+<meta charset="utf-8" >
+
+<title>Yarn 4 与 TypeScript</title>
+<meta name="keywords" content="Yarn 4 与 TypeScript, 可可的大树">
+<meta name="description" content="前提使用 Vite 创建一个 react 项目
+1$ yarn create vite
+
+我的 yarn 版本我默认更新到了最新版(4.2.2)，新版本是 Yarn4 也叫Yarn Berry
+编辑器：vscode
+问题当创建完一个 rea">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="Yarn 4 与 TypeScript">
+<meta property="og:description" content="前提使用 Vite 创建一个 react 项目
+1$ yarn create vite
+
+我的 yarn 版本我默认更新到了最新版(4.2.2)，新版本是 Yarn4 也叫Yarn Berry
+编辑器：vscode
+问题当创建完一个 rea">
+
+<link rel="shortcut icon" href="/images/favicon.ico">
+<link rel="stylesheet" href="/style/main.css">
+
+  <meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="可可的大树" type="application/atom+xml">
+</head>
+  <body>
+    <div id="app" class="main">
+
+<div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://bighb.github.io">
+        <img class="avatar" src="/images/avatar.png" alt="logo" width="32px" height="32px">
+      </a>
+      <a href="https://bighb.github.io">
+        <h1 class="site-title">可可的大树</h1>
+      </a>
+    </div>
+    <div class="right">
+        <i class="icon menu-switch icon-menu-outline" ></i>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" style="height: 0;opacity: 0;">
+<nav class="menu-list">
+  
+    
+      <a href="/" class="menu purple-link">
+        首页
+      </a>
+    
+  
+    
+      <a href="/tags" class="menu purple-link">
+        标签
+      </a>
+    
+  
+    
+      <a href="/categories" class="menu purple-link">
+        分类
+      </a>
+    
+  
+    
+      <a href="/archives" class="menu purple-link">
+        归档
+      </a>
+    
+  
+    
+      <a href="/about" class="menu purple-link">
+        关于
+      </a>
+    
+  
+</nav>
+</div>
+
+
+
+  <div class="content-container">
+    <div class="post-detail">
+      
+      <h2 class="post-title">Yarn 4 与 TypeScript</h2>
+      <div class="post-info post-detail-info">
+        <span><i class="icon icon-calendar-outline"></i> 2024-06-14</span>
+        
+          <span>
+          <i class="icon icon-pricetags-outline"></i>
+            
+              <a href="/tags/Yarn4/">
+              Yarn4
+                
+                  ，
+                
+              </a>
+            
+              <a href="/tags/TypeScript/">
+              TypeScript
+                
+              </a>
+            
+          </span>
+        
+      </div>
+      <div class="post-content-wrapper">
+        <div class="post-content">
+          <h2 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h2><p>使用 Vite 创建一个 <code>react</code> 项目</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn create vite</span><br></pre></td></tr></table></figure>
+
+<p>我的 yarn 版本我默认更新到了最新版(4.2.2)，新版本是 <code>Yarn4</code> 也叫<code>Yarn Berry</code></p>
+<p>编辑器：vscode</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>当创建完一个 react+ts 项目之后，在编辑器打开，满屏的 ts 报红，是 TS 提示的。</p>
+<p>查询得知是 yarn 版本更新的原因</p>
+<p>在新版 yarn 中 node_modules 结构已经变了，因此 vscode 中 ts 提示找不到相关模块</p>
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>官方解决方案,运行下面命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yarn dlx @yarnpkg/sdks vscode</span><br></pre></td></tr></table></figure>
+
+<p>运行之后项目根目录会多出一个.vscode 配置目录</p>
+<ol>
+<li>然后 <code>ctrl+shift+p</code></li>
+<li>选择 “选择 TypeScript 版本”</li>
+<li>选择 “使用工作区版本”</li>
+</ol>
+
+        </div>
+          
+        <div class="top-div">
+          <ol class="top-box"><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E5%89%8D%E6%8F%90"><span class="top-box-text">前提</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E9%97%AE%E9%A2%98"><span class="top-box-text">问题</span></a></li><li class="top-box-item top-box-level-2"><a class="top-box-link" href="#%E8%A7%A3%E5%86%B3"><span class="top-box-text">解决</span></a></li></ol>
+        </div>
+          
+      </div>
+    </div>
+
+    
+      <div class="next-post">
+        <a class="purple-link" href="/2024/06/04/2024-06-04/">
+          <h3 class="post-title">
+            下一篇：基于vue-element-admin做离线主题切换
+          </h3>
+        </a>
+      </div>
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="site-footer">
+  <div class="social-container">
+    
+      
+        <a aria-label="跳转至github" href="https://github.com/bighb" target="_blank">
+          <i class="icon icon-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <a href="https://github.com/f-dong/hexo-theme-minimalism" target="_blank">Theme</a>
+  
+  
+  
+  
+  
+  
+</div>
+</footer>
+
+
+      </div>
+    </div>
+    
+<script id="hexo-configurations"> window.theme_config = {"image":{"lazyload_enable":true,"photo_zoom":"simple-lightbox"}}; window.is_post = true; </script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
+
